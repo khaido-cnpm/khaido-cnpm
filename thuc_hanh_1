@@ -2,7 +2,7 @@
 using namespace std;
 
 string chthuong (string s) {
-	for (size_t i; i < s.length(); ++i) {
+	for (size_t i = 0; i < s.length(); ++i) {
 		s[i] = tolower(s[i]);
 	} 
 	return s;
@@ -15,7 +15,7 @@ class phuong_tien {
 		int gio_vao;
 		int tg_do;
 		
-		bool peakH (int gio) {
+		bool peakH (int gio) const {
 			return ((gio >= 6 && gio <= 10) || (gio >= 15 && gio <= 19));
 		}
 		
@@ -115,7 +115,7 @@ class bai_xe {
 };
 
 
-int bai_xe :: lay_ma () {
+int bai_xe :: lay_ma () const {
 	return ma_bai;
 }
 
@@ -136,6 +136,7 @@ bool bai_xe :: them (phuong_tien v) {
 		co3 = true;
 		return true;
 	}
+    return false;
 }
 
 bool bai_xe :: xoa (int ma_xe) {
@@ -200,7 +201,7 @@ bool bai_xe :: co_loai (string loai, int& dem, double& tong) const {
 
 class Systeminterface {
 	private:
-		bai_xe1, bai2, bai3;
+		bai_xe bai1, bai2, bai3;
 		bool co1, co2, co3;
 		
 		public:
@@ -209,6 +210,6 @@ class Systeminterface {
 };
 
 void Systeminterface :: runMenu() {
-	cout << 
+
 }
 
