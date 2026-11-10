@@ -138,7 +138,9 @@ SystemInterface::SystemInterface() : co1(false), co2(false), co3(false) {}
 
 void SystemInterface::runMenu() {
     int chon;
-    while (true) {
+    bool thoat = false; 
+    	
+    while (!thoat) {
         cout << "\n===== QUAN LY BAI DO XE =====\n";
         cout << "1. Tao bai do\n";
         cout << "2. Them xe\n";
@@ -152,8 +154,7 @@ void SystemInterface::runMenu() {
         cout << "Chon: ";
         cin >> chon;
         
-        bool thoat = false; 
-        if (!thoat) { 
+         
     
 		switch (chon) {
 		
@@ -262,7 +263,6 @@ void SystemInterface::runMenu() {
 		
     	}
 		}
-    }
 }
 
 int main() {
