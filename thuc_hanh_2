@@ -178,7 +178,6 @@ void SystemInterface::runMenu() {
 				cout << "Trung ma bai, da doi sang ma moi: " << mm << "\n";
 				ma = mm; 
 			} 
-            ++sl_bai; 
             cout << "Da tao bai " << ma << "\n";
             b_xe[++sl_bai] = bai_xe(ma, kt); 
 			break;
